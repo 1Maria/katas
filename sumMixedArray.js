@@ -1,3 +1,4 @@
+//Feb 10 2020
 function sumMix(x){
   console.log(x);
   for(var i = 0; i < x.length; i++) {
@@ -26,7 +27,18 @@ sumMix([9, 3, '7', '3']);
 
 //22
 
-//a totally separate day
+//Aug 2 2020 
 function sumMix(x){
   return x.map(a => parseInt(a)).reduce((sum, num) => sum + num, 0);
+}
+
+//fixed my solution from February
+function sumMix(x){
+  for(let i = 0; i < x.length; i++) {
+    if (typeof x[i] == 'string') {
+      let num = parseInt(x[i]);
+      x.splice(i, 1, num);
+    }
+  }
+  return x.reduce((sum, num) => sum + num, 0);
 }
