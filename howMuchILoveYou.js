@@ -6,11 +6,9 @@ function howMuchILoveYou(nbPetals) {
     petals.set(3, "a lot");
     petals.set(4, "passionately");
     petals.set(5, "madly");
-    petals.set(6, "not at all");
+  
     
-    console.log(nbPetals % 6, "nbPetals");
-    
-    if (nbPetals <= 6) {
+    if (nbPetals <= 5) {
       return petals.get(nbPetals);
     } else {
       return petals.get(nbPetals % 6);
